@@ -1,5 +1,6 @@
 package my.rockpilgrim.recorder.settings
 
+import android.content.Context
 import android.util.Log
 import my.rockpilgrim.recorder.RecorderSettings
 
@@ -32,5 +33,17 @@ class SettingsPresenter : RatesHolder {
         Log.i(TAG,"changeRate: ${recordSettings.currentRate}")
         recordSettings.currentRate = recordSettings.rates[currentRateIndex]
         Log.i(TAG,"changeRate: ${recordSettings.currentRate}")
+    }
+
+    override fun isBluetoothConnected(context: Context): Boolean {
+        return recordSettings.isBluetoothConnected(context)
+    }
+
+    override fun connectBluetooth() {
+        recordSettings.connectBluetooth()
+    }
+
+    override fun disconnectBluetooth() {
+        recordSettings.disconnectBluetooth()
     }
 }

@@ -1,9 +1,15 @@
 package my.rockpilgrim.recorder
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.media.AudioFormat
+import android.media.AudioManager
 import android.media.AudioRecord
 import android.media.MediaRecorder
 import android.util.Log
+import androidx.core.content.ContextCompat.getSystemService
 
 
 object RecorderSettings {
@@ -11,7 +17,7 @@ object RecorderSettings {
     val TAG = "RecorderSettings"
     var currentRate: Int = 16000
     var rates: ArrayList<Int> = ArrayList()
-        private set(value) {}
+    var audioManager:AudioManager?=null
 
     init {
         /*val audioManager =
@@ -24,6 +30,41 @@ object RecorderSettings {
                 rates.add(rate)
             }
         }
+    }
+
+    fun setContext(context: Context) {
+        val audioManager:AudioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        val intent= Intent()
+        Log.i(TAG, "Bluetooth doesn't connected")
+
+        if (AudioManager.SCO_AUDIO_STATE_CONNECTED == intent.getIntExtra(
+                AudioManager.EXTRA_SCO_AUDIO_STATE,
+                -1)) {
+            Log.i(TAG, "Bluetooth")
+        }
+        if (audioManager.isBluetoothScoOn) {
+            Log.i(TAG, "Bluetooth 2")
+        }
+        if (audioManager.isBluetoothScoAvailableOffCall) {
+            Log.i(TAG, "Bluetooth 3")
+            audioManager.startBluetoothSco()
+        }
+        audioManager.stopBluetoothSco()
+    }
+
+    fun isBluetoothConnected(context: Context): Boolean {
+        audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        audioManager?.startBluetoothSco()
+        val isExist:Boolean=audioManager?.isBluetoothScoOn!!
+        audioManager?.stopBluetoothSco()
+        return isExist
+    }
+
+    fun connectBluetooth() {
+        audioManager?.startBluetoothSco()
+    }
+    fun disconnectBluetooth() {
+        audioManager?.stopBluetoothSco()
     }
 
     private fun checkRate(rate: Int): Boolean {
