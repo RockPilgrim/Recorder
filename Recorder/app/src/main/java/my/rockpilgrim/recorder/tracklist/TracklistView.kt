@@ -1,9 +1,9 @@
-package my.rockpilgrim.recording.tracklist
+package my.rockpilgrim.recorder.tracklist
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.list_layout.*
-import my.rockpilgrim.recording.R
+import my.rockpilgrim.recorder.R
 
 class TracklistView : AppCompatActivity() {
 

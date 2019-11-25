@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording.record
+package my.rockpilgrim.recorder.record
 
 import android.Manifest
 import android.content.Context
@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.record_layout.*
-import my.rockpilgrim.recording.Constants
-import my.rockpilgrim.recording.R
-import my.rockpilgrim.recording.settings.SettingsView
-import my.rockpilgrim.recording.tracklist.TracklistView
+import my.rockpilgrim.recorder.Constants
+import my.rockpilgrim.recorder.R
+import my.rockpilgrim.recorder.settings.SettingsView
+import my.rockpilgrim.recorder.tracklist.TracklistView
 
 class RecordView : AppCompatActivity(), ConnectToUI {
     private val TAG = "RecordView"

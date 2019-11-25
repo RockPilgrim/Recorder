@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording.record
+package my.rockpilgrim.recorder.record
 
 interface Recorder {
 

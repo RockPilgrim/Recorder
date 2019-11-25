@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording.tracklist
+package my.rockpilgrim.recorder.tracklist
 
 interface Player {
 

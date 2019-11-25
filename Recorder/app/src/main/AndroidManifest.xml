@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="my.rockpilgrim.recording">
+    package="my.rockpilgrim.recorder">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -17,11 +17,11 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".tracklist.TracklistView" />
+        <activity android:name="my.rockpilgrim.recorder.tracklist.TracklistView" />
 
-        <activity android:name=".settings.SettingsView" />
+        <activity android:name="my.rockpilgrim.recorder.settings.SettingsView" />
 
-        <activity android:name=".record.RecordView">
+        <activity android:name="my.rockpilgrim.recorder.record.RecordView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

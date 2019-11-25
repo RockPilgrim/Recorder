@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording.settings
+package my.rockpilgrim.recorder.settings
 
 import android.view.View
 import android.widget.CompoundButton

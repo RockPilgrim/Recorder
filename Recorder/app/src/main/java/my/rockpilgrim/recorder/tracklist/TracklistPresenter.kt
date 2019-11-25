@@ -1,11 +1,11 @@
-package my.rockpilgrim.recording.tracklist
+package my.rockpilgrim.recorder.tracklist
 
 import android.content.Context
 import android.media.MediaPlayer
 import android.util.Log
-import my.rockpilgrim.recording.Database
-import my.rockpilgrim.recording.Model
-import my.rockpilgrim.recording.record.ConnectToUI
+import my.rockpilgrim.recorder.Database
+import my.rockpilgrim.recorder.Model
+import my.rockpilgrim.recorder.record.ConnectToUI
 
 class TracklistPresenter(val context: Context) : ClickCallback, Player {
 

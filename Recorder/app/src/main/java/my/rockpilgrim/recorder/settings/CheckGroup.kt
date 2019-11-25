@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording.settings
+package my.rockpilgrim.recorder.settings
 
 interface CheckGroup {
     fun onChecked(cerrent: SettingsListHolder)

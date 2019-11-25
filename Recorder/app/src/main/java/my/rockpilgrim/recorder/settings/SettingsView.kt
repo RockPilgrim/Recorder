@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording.settings
+package my.rockpilgrim.recorder.settings
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.list_layout.*
-import my.rockpilgrim.recording.Constants
-import my.rockpilgrim.recording.R
+import my.rockpilgrim.recorder.Constants
+import my.rockpilgrim.recorder.R
 
 class SettingsView : AppCompatActivity() {
 

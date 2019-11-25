@@ -1,9 +1,9 @@
-package my.rockpilgrim.recording.tracklist
+package my.rockpilgrim.recorder.tracklist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import my.rockpilgrim.recording.R
+import my.rockpilgrim.recorder.R
 
 class TracklistAdapter(var clickCallback: ClickCallback?) :
     RecyclerView.Adapter<TracklistHolder>() {

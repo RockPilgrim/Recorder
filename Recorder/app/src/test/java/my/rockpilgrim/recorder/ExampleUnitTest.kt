@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording
+package my.rockpilgrim.recorder
 
 import org.junit.Test
 

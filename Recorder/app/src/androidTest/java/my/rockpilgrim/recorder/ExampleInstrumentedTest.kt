@@ -1,4 +1,4 @@
-package my.rockpilgrim.recording
+package my.rockpilgrim.recorder
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

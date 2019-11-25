@@ -1,9 +1,9 @@
-package my.rockpilgrim.recording.record
+package my.rockpilgrim.recorder.record
 
 import android.media.MediaRecorder
-import my.rockpilgrim.recording.Database
-import my.rockpilgrim.recording.Model
-import my.rockpilgrim.recording.RecorderSettings
+import my.rockpilgrim.recorder.Database
+import my.rockpilgrim.recorder.Model
+import my.rockpilgrim.recorder.RecorderSettings
 import java.io.IOException
 
 class RecordPresenter(val recordUI: ConnectToUI) : Recorder {

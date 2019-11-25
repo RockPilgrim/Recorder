@@ -1,7 +1,7 @@
-package my.rockpilgrim.recording.settings
+package my.rockpilgrim.recorder.settings
 
 import android.util.Log
-import my.rockpilgrim.recording.RecorderSettings
+import my.rockpilgrim.recorder.RecorderSettings
 
 class SettingsPresenter : RatesHolder {
 

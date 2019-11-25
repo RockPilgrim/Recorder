@@ -1,11 +1,11 @@
-package my.rockpilgrim.recording.tracklist
+package my.rockpilgrim.recorder.tracklist
 
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.track_item.view.*
-import my.rockpilgrim.recording.R
-import my.rockpilgrim.recording.record.ConnectToUI
+import my.rockpilgrim.recorder.R
+import my.rockpilgrim.recorder.record.ConnectToUI
 
 class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ConnectToUI {
 
