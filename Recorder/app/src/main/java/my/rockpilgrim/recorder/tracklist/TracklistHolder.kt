@@ -9,14 +9,10 @@ import my.rockpilgrim.recorder.record.ConnectToUI
 
 class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ConnectToUI {
 
-    var state: Boolean = true
-
     fun bind(position: Int, clickCallback: ClickCallback?) {
         itemView.trackNameTextView.text = "Track #${position + 1}"
         itemView.playButton.setOnClickListener {
             clickCallback?.onClick(position, this)
-//            changeState(state)
-//            state=!state
         }
     }
 

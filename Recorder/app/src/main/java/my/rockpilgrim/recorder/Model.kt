@@ -20,10 +20,8 @@ class Model : Database {
 
     init {
         try {
-            // create a File object for the parent directory
             val recorderDirectory =
                 File(Environment.getExternalStorageDirectory().absolutePath + packagePath)
-            // have the object build the directory structure, if needed.
             recorderDirectory.mkdirs()
         } catch (e: IOException) {
             e.printStackTrace()
@@ -47,7 +45,6 @@ class Model : Database {
         if (dir.exists()) {
             Log.i(TAG,"getListCount dir: ${dir.listFiles().size}")
             return dir.listFiles().size
-//            return 1
         } else {
             return 0
         }

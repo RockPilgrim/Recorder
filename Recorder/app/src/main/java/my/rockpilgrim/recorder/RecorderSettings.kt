@@ -1,16 +1,11 @@
 package my.rockpilgrim.recorder
 
-import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
 import android.media.AudioFormat
 import android.media.AudioManager
 import android.media.AudioRecord
 import android.media.MediaRecorder
 import android.util.Log
-import androidx.core.content.ContextCompat.getSystemService
-
 
 object RecorderSettings {
 
