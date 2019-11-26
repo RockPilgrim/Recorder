@@ -18,9 +18,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="my.rockpilgrim.recorder.tracklist.TracklistView" />
+        <activity android:name="my.rockpilgrim.recorder.tracklist.TracklistView" >
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name="my.rockpilgrim.recorder.settings.SettingsView" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name="my.rockpilgrim.recorder.settings.SettingsView">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
 
         <activity android:name="my.rockpilgrim.recorder.record.RecordView">
             <intent-filter>
