@@ -4,17 +4,22 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:padding="4dp"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:background="@color/colorBackground"
     android:orientation="horizontal">
 
     <RadioButton
         android:id="@+id/radioButton"
         android:text="8000 Hz"
         android:textSize="24sp"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:buttonTint="@color/colorWhite"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:gravity="center_vertical"
         android:checked="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="40dp"/>
 
 </LinearLayout>
