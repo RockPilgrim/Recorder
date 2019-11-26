@@ -20,9 +20,6 @@ object RecorderSettings {
     var audioManager:AudioManager?=null
 
     init {
-        /*val audioManager =
-            getSystemService(Context.AUDIO_SERVICE) as AudioManager
-        val rate = audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE)*/
         for (rate in arrayOf(8000, 11025, 16000, 22050,32000, 44100, 48000,96000,192000)) {
             if (checkRate(rate)) {
                 Log.i(TAG, "Supported rate: $rate")
@@ -32,31 +29,11 @@ object RecorderSettings {
         }
     }
 
-    fun setContext(context: Context) {
-        val audioManager:AudioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
-        val intent= Intent()
-        Log.i(TAG, "Bluetooth doesn't connected")
-
-        if (AudioManager.SCO_AUDIO_STATE_CONNECTED == intent.getIntExtra(
-                AudioManager.EXTRA_SCO_AUDIO_STATE,
-                -1)) {
-            Log.i(TAG, "Bluetooth")
-        }
-        if (audioManager.isBluetoothScoOn) {
-            Log.i(TAG, "Bluetooth 2")
-        }
-        if (audioManager.isBluetoothScoAvailableOffCall) {
-            Log.i(TAG, "Bluetooth 3")
-            audioManager.startBluetoothSco()
-        }
-        audioManager.stopBluetoothSco()
-    }
-
     fun isBluetoothConnected(context: Context): Boolean {
         audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
         audioManager?.startBluetoothSco()
         val isExist:Boolean=audioManager?.isBluetoothScoOn!!
-        audioManager?.stopBluetoothSco()
+        if (!isExist) audioManager?.stopBluetoothSco()
         return isExist
     }
 

@@ -29,7 +29,7 @@ class Model : Database {
         if (dir.exists()) {
             val count = dir.listFiles().size
             output =
-                Environment.getExternalStorageDirectory().absolutePath + "${packagePath}recording" + count + ".mp3"
+                Environment.getExternalStorageDirectory().absolutePath + "${packagePath}recording_" + count + ".mp3"
         }
         return output
     }
