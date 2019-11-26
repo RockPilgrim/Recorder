@@ -3,14 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:textColor="@color/colorBlack"
+        android:text="Your saved recordings"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="true"
+        android:layout_marginTop="30dp"
         android:padding="16dp"
-        android:textSize="40sp"
-        android:text="List:"
+        android:textSize="28sp"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
