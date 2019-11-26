@@ -11,7 +11,7 @@
 
     <RadioButton
         android:id="@+id/radioButton"
-        android:text="8000 Hz"
+        android:text="@string/rateCap"
         android:textSize="24sp"
         android:textColor="@color/colorWhite"
         android:buttonTint="@color/colorWhite"

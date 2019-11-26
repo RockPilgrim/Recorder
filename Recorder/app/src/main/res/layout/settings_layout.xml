@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="Settings"
+        android:text="@string/settingsActivityTitle"
         android:textColor="@color/colorWhite"
         android:textAllCaps="true"
         android:layout_marginTop="30dp"

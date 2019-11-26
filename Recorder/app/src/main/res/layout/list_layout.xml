@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Your saved recordings"
+        android:text="@string/listActivityTitle"
         android:textColor="@color/colorWhite"
         android:textAllCaps="true"
         android:layout_marginTop="30dp"
