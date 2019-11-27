@@ -5,12 +5,13 @@ import java.util.*
 class TimeLine {
 
     private var timeListener:TimeListener?=null
-    private val timer = Timer()
+    private var timer: Timer? = null
     var currentTime = 0
     val TAG = "TimeLine"
 
     fun start() {
-        timer.scheduleAtFixedRate(object : TimerTask(){
+        timer = Timer()
+        timer?.scheduleAtFixedRate(object : TimerTask(){
             override fun run() {
                 currentTime++
                 setTime()
@@ -19,7 +20,8 @@ class TimeLine {
     }
 
     fun stop() {
-        timer.cancel()
+        timer?.cancel()
+        timer = null
         currentTime = 0
         timeListener?.setTime("0:00")
     }
