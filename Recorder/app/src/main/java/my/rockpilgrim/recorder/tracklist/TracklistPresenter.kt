@@ -14,13 +14,13 @@ class TracklistPresenter(val context: Context) : ClickCallback, Player {
     private lateinit var player: MediaPlayer
     private var isPlaing: Boolean = false
     private var currentTrack = -1
-    private var connector: ConnectToUI? = null
+    private var connector: ConnectToList? = null
 
     init {
         database = Model()
     }
 
-    override fun onClick(position: Int, connector: ConnectToUI) {
+    override fun onClick(position: Int, connector: ConnectToList) {
         if (isPlaing && currentTrack == position) {
             isPlaing = false
             stopPlaying()

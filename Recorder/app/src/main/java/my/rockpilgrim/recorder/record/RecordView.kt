@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.record_layout.*
+import kotlinx.android.synthetic.main.track_item.*
 import my.rockpilgrim.recorder.Constants
 import my.rockpilgrim.recorder.R
 import my.rockpilgrim.recorder.settings.SettingsView
@@ -95,6 +96,10 @@ class RecordView : AppCompatActivity(), ConnectToUI {
             stateImageView.setImageResource(R.drawable.ic_record_on)
         else
             stateImageView.setImageResource(R.drawable.ic_record_off)
+    }
+
+    override fun setTime(time: String) {
+        timeTextView.setText(time)
     }
 
     override fun makeToast(line: String) {

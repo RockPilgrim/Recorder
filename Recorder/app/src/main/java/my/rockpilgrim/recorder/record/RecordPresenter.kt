@@ -4,6 +4,7 @@ import android.media.MediaRecorder
 import my.rockpilgrim.recorder.Database
 import my.rockpilgrim.recorder.Model
 import my.rockpilgrim.recorder.RecorderSettings
+import my.rockpilgrim.recorder.utils.TimeLine
 import java.io.IOException
 
 class RecordPresenter(val recordUI: ConnectToUI) : Recorder {
@@ -13,9 +14,11 @@ class RecordPresenter(val recordUI: ConnectToUI) : Recorder {
     private var mediaRecorder: MediaRecorder? = null
     private var database: Database = Model()
     private val recordSettings: RecorderSettings
+    private val timeLine: TimeLine = TimeLine()
 
     init {
         recordSettings = RecorderSettings
+        timeLine.setTimeListener(recordUI)
     }
 
     override fun startRecording() {
@@ -27,6 +30,7 @@ class RecordPresenter(val recordUI: ConnectToUI) : Recorder {
                 isRecording = true
                 recordUI.changeState(isRecording)
                 recordUI.makeToast("start talking")
+                timeLine.start()
             } catch (e: IllegalStateException) {
                 recordUI.makeToast("Error")
                 e.printStackTrace()
@@ -44,6 +48,7 @@ class RecordPresenter(val recordUI: ConnectToUI) : Recorder {
             isRecording = false
             recordUI.changeState(isRecording)
             recordUI.makeToast("stop talking")
+            timeLine.stop()
         }
     }
 

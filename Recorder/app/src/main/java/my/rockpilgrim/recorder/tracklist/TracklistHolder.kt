@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.track_item.view.*
 import my.rockpilgrim.recorder.R
 import my.rockpilgrim.recorder.record.ConnectToUI
 
-class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ConnectToUI {
+class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ConnectToList {
 
     fun bind(position: Int, clickCallback: ClickCallback?) {
         itemView.trackNameTextView.text = "Track #${position + 1}"
