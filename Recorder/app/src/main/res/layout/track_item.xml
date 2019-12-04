@@ -23,12 +23,20 @@
         android:text="@string/trackCap"
         android:textColor="@color/colorWhite"
         android:textSize="24sp"
+        android:layout_weight="1"
         android:layout_marginStart="24dp"
         android:gravity="center_vertical"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         app:layout_constraintEnd_toStartOf="@+id/playButton"/>
 
+    <ImageButton
+        android:id="@+id/trackSettingsButton"
+        android:src="@drawable/ic_more_vert"
+        android:layout_gravity="center"
+        android:background="?android:selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

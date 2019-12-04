@@ -7,4 +7,6 @@
     <string name="rateCap">Not_found_Hz</string>
     <string name="settingsActivityTitle">Settings</string>
     <string name="trackCap">Track name not found</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
 </resources>
