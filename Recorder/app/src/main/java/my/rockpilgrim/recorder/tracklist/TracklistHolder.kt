@@ -13,21 +13,23 @@ import my.rockpilgrim.recorder.R
 class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), ConnectToList{
 
     fun bind(position: Int, clickCallback: ClickCallback?) {
-        itemView.trackNameTextView.text = "Track #${position + 1}"
+        itemView.trackNameTextView.text = clickCallback?.getTrackName(position)
+//        itemView.trackNameTextView.text = "Track #${position + 1}"
         itemView.playButton.setOnClickListener {
             clickCallback?.onClick(position, this)
         }
         itemView.trackSettingsButton.setOnClickListener {v ->
-            showMenu(v)
+            showMenu(v,clickCallback)
         }
     }
 
-    private fun showMenu(v: View) {
+    private fun showMenu(v: View,clickCallback: ClickCallback?) {
         val popupMenu = PopupMenu(itemView.context, v)
         popupMenu.inflate(R.menu.menu)
         popupMenu.setOnMenuItemClickListener { itemMenu: MenuItem? ->
             when (itemMenu?.itemId) {
                 R.id.deleteTrackMenuButton -> {
+                    clickCallback?.deleteTrack(adapterPosition)
                     deleteTrack()
                     true
                 }
@@ -37,7 +39,6 @@ class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), Conne
                 else ->
                     false
             }
-
         }
         popupMenu.show()
     }
@@ -46,21 +47,17 @@ class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), Conne
         makeToast("Track ${adapterPosition+1} Deleted")
     }
 
-    override fun makeToast(line: String) {
-        Toast.makeText(itemView.context, line, Toast.LENGTH_SHORT).show()
-    }
-
     override fun changeState(isPlay: Boolean) {
         if (isPlay) {
             itemView.playButton.setImageResource(R.drawable.ic_stop)
-            Toast.makeText(
-                itemView.context,
-                "Play track #${adapterPosition + 1}",
-                Toast.LENGTH_SHORT
-            ).show()
+            makeToast("Play track #${adapterPosition + 1}")
         } else {
             itemView.playButton.setImageResource(R.drawable.ic_play)
-            Toast.makeText(itemView.context, "Track stopped", Toast.LENGTH_SHORT).show()
+            makeToast("Track stopped")
         }
+    }
+
+    override fun makeToast(line: String) {
+        Toast.makeText(itemView.context, line, Toast.LENGTH_SHORT).show()
     }
 }

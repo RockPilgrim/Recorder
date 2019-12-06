@@ -34,6 +34,10 @@ class TracklistPresenter(val context: Context) : ClickCallback, Player {
         Log.i(TAG, "Track ${position + 1}, clicked")
     }
 
+    override fun deleteTrack(number: Int) {
+        database.deleteTrack(number)
+    }
+
     override fun startPlaying(track: Int) {
         player = MediaPlayer.create(context, database.getTrack(track))
         player.start()
@@ -56,5 +60,7 @@ class TracklistPresenter(val context: Context) : ClickCallback, Player {
         return database.getListCount()
     }
 
-
+    override fun getTrackName(number: Int): String {
+        return database.getTrackName(number)
+    }
 }

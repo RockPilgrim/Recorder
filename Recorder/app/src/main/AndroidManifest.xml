@@ -19,6 +19,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name="my.rockpilgrim.recorder.tracklist.TracklistView" >
+
         </activity>
 
         <activity android:name="my.rockpilgrim.recorder.settings.SettingsView">

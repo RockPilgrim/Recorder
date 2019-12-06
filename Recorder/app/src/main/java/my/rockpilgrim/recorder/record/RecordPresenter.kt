@@ -62,6 +62,6 @@ class RecordPresenter(val recordUI: ConnectToUI) : Recorder {
         mediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
         mediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
         mediaRecorder?.setAudioSamplingRate(recordSettings.currentRate)
-        mediaRecorder?.setOutputFile(database.getPath())
+        mediaRecorder?.setOutputFile(database.getNextTrackPath())
     }
 }
