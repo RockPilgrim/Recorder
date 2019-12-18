@@ -90,12 +90,6 @@ class Model : Database {
     }
 
     private fun updateList(number: Int) {
-/*        Log.i(TAG, dir.listFiles()[number + 1].nameWithoutExtension)
-        for (i: Int in number until dir.listFiles().size - 1) {
-            dir.listFiles().set(i, dir.listFiles()[i + 1])
-            Log.i(TAG, "Number #$i")
-        }
-        Log.i(TAG, dir.listFiles()[number].nameWithoutExtension)*/
     }
 
 
