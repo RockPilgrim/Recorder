@@ -11,7 +11,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.list_layout.*
 import kotlinx.android.synthetic.main.record_layout.*
+import kotlinx.android.synthetic.main.settings_layout.*
 import kotlinx.android.synthetic.main.track_item.*
 import my.rockpilgrim.recorder.Constants
 import my.rockpilgrim.recorder.R
@@ -37,6 +39,8 @@ class RecordView : AppCompatActivity(), ConnectToUI {
         recorder = RecordPresenter(this)
         initClickListener()
     }
+
+
 
     override fun onResume() {
         super.onResume()

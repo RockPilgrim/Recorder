@@ -27,7 +27,22 @@ class SettingsView : AppCompatActivity() {
         myadapter = SettingsListAdapter(ratesHolder)
         recyclerView.adapter = myadapter
 
+        initToolBar()
         initCheckBox()
+    }
+
+    private fun initToolBar() {
+        val toolbar = settingsToolbar
+        setSupportActionBar(toolbar)
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     fun initCheckBox() {

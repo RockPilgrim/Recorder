@@ -11,7 +11,6 @@
         android:id="@+id/listToolbar"
         android:layout_width="match_parent"
         app:navigationIcon="@drawable/ic_arrow_back"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_height="wrap_content"/>
 
     <TextView
