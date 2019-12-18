@@ -5,7 +5,6 @@ import android.media.MediaPlayer
 import android.util.Log
 import my.rockpilgrim.recorder.Database
 import my.rockpilgrim.recorder.Model
-import my.rockpilgrim.recorder.record.ConnectToUI
 
 class TracklistPresenter(val context: Context) : ClickCallback, Player {
 
@@ -39,7 +38,7 @@ class TracklistPresenter(val context: Context) : ClickCallback, Player {
     }
 
     override fun startPlaying(track: Int) {
-        player = MediaPlayer.create(context, database.getTrack(track))
+        player = MediaPlayer.create(context, database.getTrackURI(track))
         player.start()
         connector?.changeState(isPlaing)
         player.setOnCompletionListener {

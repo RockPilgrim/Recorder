@@ -44,7 +44,7 @@ class TracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView), Conne
     }
 
     private fun deleteTrack() {
-        makeToast("Track ${adapterPosition+1} Deleted")
+        makeToast(itemView.trackNameTextView.text.toString())
     }
 
     override fun changeState(isPlay: Boolean) {
