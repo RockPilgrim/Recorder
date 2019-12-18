@@ -7,14 +7,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/listToolbar"
+        android:layout_width="match_parent"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:text="@string/listActivityTitle"
         android:textColor="@color/colorWhite"
         android:textAllCaps="true"
-        android:layout_marginTop="30dp"
-        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
         android:textSize="28sp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
